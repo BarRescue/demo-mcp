@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: cursus-mcp-server
+  ai:
+    mcp:
+      server:
+        name: cursus-mcp-server
+        version: 1.0.0
+        type: SYNC
+        # Streamable HTTP: één endpoint op /mcp (zonder dit valt Spring AI terug op SSE)
+        protocol: STREAMABLE
+        instructions: >
+          Deze server geeft informatie over het cursusaanbod: zoeken op categorie,
+          niveau of zoekterm, en details per cursus (prijs, datum, locatie, plekken).
+
+server:
+  port: 8080
